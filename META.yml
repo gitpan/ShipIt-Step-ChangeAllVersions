@@ -22,8 +22,9 @@ no_index:
     - xt
 requires:
   ShipIt: 0.52
+  parent: 0
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-  repository: origin
-version: 0.001
+  repository: git://github.com/gfx/Perl5-ShipIt-Step-ChangeAllVersions.git
+version: 0.002
