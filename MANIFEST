@@ -13,11 +13,13 @@ META.yml
 README
 t/00_load.t
 t/01_basic.t
+t/02_collect_files.t
 t/test/.shipit
 t/test/Bar.pm
 t/test/Baz.pod
-t/test/Foo.pm
+t/test/lib/Foo.pm
 t/test/Makefile.PL
 t/test/MANIFEST
+t/test/script/qux
 xt/01_podspell.t
 xt/02_pod.t

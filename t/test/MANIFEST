@@ -1,5 +1,7 @@
 # for testing
-Foo.pm
+lib/Foo.pm
 Bar.pm
 Baz.pod
+script/qux
 Makefile.PL
+.shipit
