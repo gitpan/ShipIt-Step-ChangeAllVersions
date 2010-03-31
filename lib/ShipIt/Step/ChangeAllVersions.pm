@@ -4,7 +4,7 @@ use 5.008_001;
 use strict;
 use warnings;
 
-our $VERSION = '0.005';
+our $VERSION = '0.006';
 
 use parent qw(ShipIt::Step);
 use Fatal qw(open close rename opendir closedir);
@@ -78,7 +78,7 @@ sub run {
             # "This is Foo version $ver.",
             # or "This document descrives Foo version $ver."
             if (/\A =head1 \s+ VERSION\b/xms ... /\A =\w+/xms) {
-                if (s/(version \s+) $current_version/$1$new_version/xms) {
+                if (s/(version \b .+) $current_version/$1$new_version/xms) {
                     $self->{changed_version_section}{$module}++;
                     $self->log("Update the VERSION section in $module.");
                     $need_replace++;
@@ -130,7 +130,7 @@ ShipIt::Step::ChangeAllVersions - Changes version information in all the modules
 
 =head1 VERSION
 
-This document describes ShipIt::Step::ChangeAllVersions version 0.005.
+This document describes ShipIt::Step::ChangeAllVersions version 0.006.
 
 =head1 SYNOPSIS
 
