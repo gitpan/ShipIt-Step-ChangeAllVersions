@@ -4,7 +4,7 @@ use 5.008_001;
 use strict;
 use warnings;
 
-our $VERSION = '0.006';
+our $VERSION = '0.007';
 
 use parent qw(ShipIt::Step);
 use Fatal qw(open close rename opendir closedir);
@@ -17,7 +17,7 @@ sub collect_files {
 
     # from subdir
     find sub {
-        return if not -f $_;
+        return if not ( -f $_ && not -l $_ );
 
         if($_ =~ $looks_like_perl) {
             push @files, $File::Find::name;
@@ -130,7 +130,7 @@ ShipIt::Step::ChangeAllVersions - Changes version information in all the modules
 
 =head1 VERSION
 
-This document describes ShipIt::Step::ChangeAllVersions version 0.006.
+This document describes ShipIt::Step::ChangeAllVersions version 0.007.
 
 =head1 SYNOPSIS
 

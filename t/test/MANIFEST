@@ -1,7 +1,0 @@
-# for testing
-lib/Foo.pm
-Bar.pm
-Baz.pod
-script/qux
-Makefile.PL
-.shipit

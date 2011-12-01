@@ -19,7 +19,6 @@ t/test/Bar.pm
 t/test/Baz.pod
 t/test/lib/Foo.pm
 t/test/Makefile.PL
-t/test/MANIFEST
 t/test/script/intentionally_empty
 t/test/script/qux
 xt/01_podspell.t
